@@ -8,8 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/compiler-sfc": "^3.3.4",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "postcss-pxtorem": "^6.0.0",
+    "sass": "^1.64.1",
+    "sass-loader": "^13.3.2",
+    "vue": "^3.2.3",
+    "vue-router": "^4.2.4",
+    "webpack-bundle-analyzer": "^4.9.0",
+    "webpackbar": "^5.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

@@ -1,0 +1,223 @@
+// absolute 布局垂直居中
+@mixin absoluteVC() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// absolute 布局水平居中
+@mixin absoluteHC() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// absolute 布局水平、垂直居中
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// fixed 布局水平、垂直居中
+@mixin fixedCenter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flexStart {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flexEnd {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexAllCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+@mixin flexColumnCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin bgCenter {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin bg($pathFile, $pos, $size, $repeat) {
+  background-image: url($pathFile);
+  background-position: $pos;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+// 点击状态背景颜色
+@mixin activeBg($bg: #f0f0f0) {
+  cursor: pointer;
+  &:active {
+    background: $bg;
+  }
+}
+
+// 点击状态
+@mixin activeOpacity($opacity: 0.7) {
+  cursor: pointer;
+  &:active {
+    opacity: $opacity;
+  }
+}
+
+//单行溢出显示省略号
+@mixin ellipsis() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+//多行溢出显示省略号
+@mixin ellipsis-ln($line) {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: $line;
+  word-break: break-all;
+}
+
+
+// 修改输入框提示颜色
+@mixin placeholder($color: #5e2116, $fsize: 18px) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $fsize;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $fsize;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $fsize;
+  }
+}
+
+// 不展示滚动条 但可滚动元素
+@mixin hiddenScrollBar() {
+  scrollbar-color: transparent transparent;
+  scrollbar-track-color: transparent;
+  -ms-scrollbar-track-color: transparent;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    height: 0;
+    display: none;
+  }
+  &::-moz-scrollbar {
+    display: none;
+  }
+  &::-ms-scrollbar {
+    display: none;
+  }
+  &::-o-scrollbar {
+    display: none;
+  }
+}
+// 设置滚动条颜色
+@mixin scrollbarColor ($color: #ddd) {
+  /* Webkit浏览器 */
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  // 滚动条轨道
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  // 滚动条轨道
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+  // 滚动条滑块
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    min-height: 28px;
+    border-radius: 4px;
+  }
+  /* Firefox浏览器 */
+  &::-moz-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-moz-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-moz-scrollbar-track-piece {
+    background-color: transparent;
+  }
+  &::-moz-scrollbar-thumb {
+    background-color: $color;
+    min-height: 28px;
+    border-radius: 4px;
+  }
+  /* IE和Edge浏览器 */
+  &::-ms-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-ms-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-ms-scrollbar-track-piece {
+    background-color: transparent;
+  }
+  &::-ms-scrollbar-thumb {
+    background-color: $color;
+    min-height: 28px;
+    border-radius: 4px;
+  }
+  /* o内核浏览器 */
+  &::-o-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-o-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-o-scrollbar-track-piece {
+    background-color: transparent;
+  }
+  &::-o-scrollbar-thumb {
+    background-color: $color;
+    min-height: 28px;
+    border-radius: 4px;
+  }
+}
