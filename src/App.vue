@@ -9,7 +9,7 @@ import { defineComponent, onMounted } from 'vue'
 export default defineComponent({
   setup() {
     onMounted(() => {
-      console.error('!App onMounted !!')
+      console.error('App onMounted !!')
     })
   }
 })
