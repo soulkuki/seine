@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: sueRim
+ * @Date: 2023-08-04 17:04:58
+ * @LastEditors: sueRim
+ * @LastEditTime: 2023-08-04 17:07:03
+ */
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from '@router'
