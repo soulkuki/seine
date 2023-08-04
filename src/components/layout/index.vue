@@ -28,9 +28,9 @@ export default {
   display: flex;
   flex-direction: column;
   background: #fff;
+  // overflow: hidden;
   .menu-footer-wrap {
     display: flex;
-    flex: 1;
   }
 }
 @media screen {

@@ -19,7 +19,7 @@ export default defineComponent({
     const data = reactive({
       menuList: [
         { name: '搜素', logo: '', path: '/search' },
-        { name: '已购', logo: '', path: '/order' }
+        { name: '已购', logo: '', path: '/order' },
       ],
       logo: 'https://qa-img4.pcauto.com.cn/pcauto/images/autopocket/20230727/12745313.jpeg',
     })
@@ -48,10 +48,13 @@ export default defineComponent({
 <style lang="scss" scoped>
 .menu-sidebar-wrap {
   width: 20%;
+  height: calc(100vh - 80px);
   background: #edeff8;
   border-right: 1px solid #f4f4f5;
   overflow-y: scroll;
+  box-sizing: border-box;
   padding: 20px 10px;
+  @include hiddenScrollBar();
   .menu-item {
     box-sizing: border-box;
     border-radius: 10px;
