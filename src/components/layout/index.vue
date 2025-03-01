@@ -1,7 +1,15 @@
+<!--
+ * @Description: 
+ * @version: 
+ * @Author: sueRim
+ * @Date: 2025-02-28 15:54:28
+ * @LastEditors: sueRim
+ * @LastEditTime: 2025-02-28 21:12:35
+-->
 <template>
   <div class="layout-wrap">
     <Header />
-    <div class="menu-footer-wrap">
+    <div class="page-footer-wrap">
       <SideBar />
       <Main />
     </div>
@@ -29,7 +37,7 @@ export default {
   flex-direction: column;
   background: #fff;
   // overflow: hidden;
-  .menu-footer-wrap {
+  .page-footer-wrap {
     display: flex;
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-sidebar-wrap">
+  <div class="page-sidebar-wrap">
     <div :class="['menu-item', curIndex === i ? 'active' : '']" v-for="(m, i) in menuList" :key="i" @click="toClickMenu(m)">
       <img class="menu-logo" v-if="m.logo" :src="m.logo" alt="">
       <div class="menu-text">{{m.name}}</div>
@@ -19,7 +19,7 @@ export default defineComponent({
     const data = reactive({
       menuList: [
         { name: '搜素', logo: '', path: '/search' },
-        { name: '已购', logo: '', path: '/order' },
+        { name: '订单', logo: '', path: '/order' },
       ],
       logo: 'https://qa-img4.pcauto.com.cn/pcauto/images/autopocket/20230727/12745313.jpeg',
     })
@@ -46,7 +46,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.menu-sidebar-wrap {
+.page-sidebar-wrap {
   width: 20%;
   height: calc(100vh - 80px);
   background: #edeff8;

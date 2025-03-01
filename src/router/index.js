@@ -24,7 +24,7 @@ const routes = [
         name: 'order',
         component: () => import('@views/order/index.vue'),
         meta: {
-          title: '已购',
+          title: '订单',
         },
       }
     ]

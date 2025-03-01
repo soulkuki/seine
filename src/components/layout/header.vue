@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-header-wrap">
+  <div class="page-header-wrap">
     <!-- 左侧 -->
     <div class="left-area">
       <img class="page-logo" :src="logo" alt="">
@@ -67,7 +67,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.menu-header-wrap {
+.page-header-wrap {
   height: 80px;
   justify-content: space-between;
   border-bottom: 1px solid #f4f4f5;

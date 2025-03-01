@@ -16,7 +16,7 @@
 
 <script>
 import { defineComponent, onMounted, reactive, toRefs, computed } from 'vue'
-import PageTitle from "@components/page/title.vue"
+import PageTitle from "@components/pageTitle/index.vue"
 // import { useRoute, useRouter } from 'vue-router'
 
 export default defineComponent({

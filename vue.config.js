@@ -13,9 +13,11 @@ function resolve(dir) {
 
 // console.log(`🚀 🚀 🚀  您当前运行环境 ------ ${process.env.NODE_ENV}`)
 module.exports = {
-  publicPath: './',
-  // outputDir: process.env.VUE_APP_OUTPUT_DIR,
-  assetsDir: './static',
+  publicPath: process.env.NODE_ENV === 'production' 
+    ? '/seine/' // 这里改成你的仓库名
+    : '/',
+  outputDir: 'dist',
+  assetsDir: 'static',
   // lintOnSave: false,
   // lintOnSave: process.env.NODE_ENV === 'development', // 是否在开发环境下每次保存代码时都启用 eslint 验证
   css: {
@@ -71,7 +73,7 @@ module.exports = {
       },
     },
   },
-  // 生产环境构建不生成 source map，加快打包速度
+  // 生产环境不需要 sourceMap
   productionSourceMap: false,
   // 配置 webpack-dev-server 。
   devServer: {
