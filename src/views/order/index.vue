@@ -78,13 +78,13 @@ export default {
           orderNo: 'ORDER2024031501',
           createTime: '2024-03-15 10:30:00',
           status: '待付款',
-          totalAmount: 299,
+          totalAmount: 399,
           products: [
             {
               id: 1,
               name: '示例商品1',
               image: 'https://placeholder.com/150',
-              price: 299,
+              price: 399,
               quantity: 1
             }
           ]
