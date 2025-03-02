@@ -14,7 +14,7 @@ function resolve(dir) {
 // console.log(`🚀 🚀 🚀  您当前运行环境 ------ ${process.env.NODE_ENV}`)
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' 
-    ? '/seine/' // 这里改成你的仓库名
+    ? '/' // 对于 Vercel 部署，应该使用根路径 '/'，而不是 '/seine/'
     : '/',
   outputDir: 'dist',
   assetsDir: 'static',

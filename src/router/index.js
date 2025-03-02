@@ -5,7 +5,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@components/layout/index.vue'),
+    component: () => import('../components/layout/index.vue'),
     redirect: '/search',
     meta: {
       title: 'Seine'
@@ -14,7 +14,7 @@ const routes = [
       {
         path: 'search',
         name: 'search',
-        component: () => import('@views/search/index.vue'),
+        component: () => import('../views/search/index.vue'),
         meta: {
           title: '搜索'
         },
@@ -22,7 +22,7 @@ const routes = [
       {
         path: 'order',
         name: 'order',
-        component: () => import('@views/order/index.vue'),
+        component: () => import('../views/order/index.vue'),
         meta: {
           title: '订单',
         },
