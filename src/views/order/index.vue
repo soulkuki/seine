@@ -3,10 +3,11 @@
     <PageTitle title="订单" desc="发现顶尖提示语应用及其创作者" />
     <div class="order-header">
       <el-tabs v-model="activeTab" @tab-click="handleTabClick">
-        <el-tab-pane label="全部订单" name="all"></el-tab-pane>
-        <el-tab-pane label="待付款" name="unpaid"></el-tab-pane>
-        <el-tab-pane label="待发货" name="unshipped"></el-tab-pane>
-        <el-tab-pane label="已完成" name="completed"></el-tab-pane>
+        <el-tab-pane v-for="tab in tabOptions" 
+          :key="tab.name" 
+          :label="tab.label" 
+          :name="tab.name">
+        </el-tab-pane>
       </el-tabs>
     </div>
 
@@ -72,6 +73,12 @@ export default {
       activeTab: 'all',
       currentPage: 1,
       total: 0,
+      tabOptions: [
+        { label: '全部订单', name: 'all' },
+        { label: '待付款', name: 'unpaid' },
+        { label: '待发货', name: 'unshipped' },
+        { label: '已完成', name: 'completed' }
+      ],
       orderList: [
         {
           id: 1,
