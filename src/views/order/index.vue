@@ -33,7 +33,7 @@
             <span class="total-amount">总计：¥{{ order.totalAmount }}</span>
             <div class="order-actions">
               <el-button v-if="order.status === '待付款'" type="primary" size="small" @click="handlePay(order)">
-                立即付款
+                立即付款1
               </el-button>
               <el-button v-if="order.status === '待发货'" type="info" size="small" @click="handleCancel(order)">
                 取消订单
